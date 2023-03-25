@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-family: 'Sora', sans-serif;
+  font-weight: bolder;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("https://w0.peakpx.com/wallpaper/220/854/HD-wallpaper-whatsapp-black-abstract-abstract-digital-abstraction-abstracts-background-digital-pattern-texture.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container{
+  height: 500px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6ce48;
+  border-radius: 20px;
+  flex-direction: column;
+  grid-gap: 100px;
+  box-shadow: 10px 10px 0 white;
+}
+p{
+  color: white;
+  font-size: 30px;
+  background: #4e4f5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.btn-div{
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+  color: white;
+  grid-gap: 100px;
+}
+.yes-btn,.no-btn{
+  width: 100px;
+  padding: 10px;
+  text-align-last: center;
+  transform: translate(10px) ;
+  background: white;
+  color: #4e4f5b;
+  cursor: pointer;
+  box-shadow: 10px 10px 40px white;
+  transition: 0.1s all;
+}
+.fa-hand-middle-finger{
+  display: flex;
+  font-size: 30px;
+}
+.alert{
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .container{
+    display: none;
+  }
+  .alert{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 10px white;
+  }
+}

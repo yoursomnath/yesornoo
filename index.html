@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Yes Or No</title>
+</head>
+<body>
+  <div class="alert">"Abbey Lowdey Computer Pe Open Kar Mobile Pe Nahi"</div>
+  <div class="container">
+    <p>Hello Bro</p>
+    <div class="btn-div">
+      <div class="yes-btn">Yes</div>
+      <div class="no-btn">No</div>
+    </div>
+  </div>
+</body>
+<script>
+  let yBtn = document.querySelector(".yes-btn"); 
+  let nBtn = document.querySelector(".no-btn"); 
+  let name = document.querySelector("p");
+  var galis = ['Chuthiya','Gandu','Lowde','Bisuddha Chuthiya', 'Param Chuthiya', 'Bhosdibala', 'Chamkila Chuthiya', 'Jhatu', 'RoshKhepa', 'Chudirbhai'];
+  var randomGalis = galis[Math.floor(Math.random()*galis.length)];
+  var odio = new Audio('laughing-man-117725.mp3');
+  var odio2 = new Audio('Mujhe Sunna hi Nahi Hai!.mp3');
+  var yourName = prompt("Enter Your Name");
+  if(window.innerWidth>=1000){
+  for(i=0; i<=100; i++){
+    if(yourName==""){
+    var yourName = prompt("Enter Your Name");
+    }
+    else{
+      i = 100;
+    }
+  }
+}
+   
+   name.innerHTML = ""+ yourName + " , Are You "+ randomGalis+" ??";
+
+   nBtn.addEventListener('mouseover', event=>{
+   let num = Math.floor(Math.random() * 500); 
+   let num2 = Math.floor(Math.random() * 400); 
+   if(num<=50){num*=5;}
+   nBtn.style.transform = "translateX(-"+ num +"px) translateY(-"+ num2 +"px)";
+
+  })
+
+   yBtn.addEventListener('click', event=>{
+    Swal.fire('Mujhe Pahele Sehi Pata Tha Ki Tu Ek Number Ka '+randomGalis+' Hai 😂😂😂😂 ');
+    odio.play();
+   })
+
+   nBtn.addEventListener('click', event=>{
+    Swal.fire('I am not Interestd yaar, Mujhe Sunna hi Nahi Hai! ');
+    odio2.play();
+   })
+
+</script>
+</html>
